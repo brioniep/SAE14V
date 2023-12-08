@@ -1,0 +1,589 @@
+/* Partie sur le style général de la page de présentation personel*/
+
+body{
+  background-color: #8C8C88;
+}
+
+#header-HTML1{
+  padding: 1%;
+  border-style: solid;
+  border-radius: 10px;
+  margin-left: 20%;
+  margin-right: 4%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  border-color: var(--border);
+  border-width: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#prenom-HTML1{
+  text-align: center;
+  color: var(--title);
+  font-size: 40px;
+
+}
+  
+#intro-HTML1{
+  text-align: center;
+
+}
+
+#contact2-HTML1{
+color: beige;
+
+}
+
+.items1-HTML1{
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.items1-HTML1 img{
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.a-HTML1:link, .a-HTML1:visited {
+  color: var(--liens2);
+}
+  
+.a-HTML1:hover {
+  color: var(--liens2hover);
+}
+
+#centredudoc-HTML1{
+  display: flex;
+  flex-direction: column;
+}
+  
+.titre2-HTML1{
+  border-bottom-style: solid;
+  border-width: 3px;
+  margin-right: 50%;
+  padding-left: 25px;
+  border-color: var(--border);
+  color: var(--title);
+}
+  
+.bloc-HTML1{
+  border-style: solid;
+  border-radius: 10px;
+  margin: 3%;
+  transition: transform 1s cubic-bezier(0.25, 0.1, 0.25, 1);
+  border-color: var(--border);
+}
+  
+.paragraphe-HTML1{
+  padding: 4%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
+
+.bloc-HTML1:hover{
+  transform: scale(1.05);
+  border-width: 3px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Partie commune aux deux fichiers html sur le boutton darkmode*/
+
+:root {
+  --bg: #F2E6D8;
+  --text: black;
+  --border: #8C4F2B;
+  --title: #A6431F;
+  --navbar: #BF7E45;
+  --liens1: #735F5D;
+  --liens1hover: #735F5D;
+  --liens2: #735F5D;
+  --liens2hover: #4F191F;
+}
+  
+  
+#color-mode:checked ~ * {
+  --bg: #323A40 ;
+  --text: #D8D9D7;
+  --border: #8C8C88;
+  --title: #735F5D;
+  --navbar: #1A2026;
+  --liens1hover: #735F5D;
+  --liens2: #735F5D;
+  --liens2hover: #4F191F;
+  transition: 0.5s;
+}
+
+.color-theme{
+  background: var(--bg);
+  color: var(--text);
+  padding-top: 2%;
+  border-radius: 50px;
+  margin-left:3%;
+  margin-right: 3%;
+  border-radius: 55px;
+  border-style: solid;
+  border-color: var(--border);
+}
+  
+.light-mode-hide {
+  display: none;
+}
+  
+
+input[type="checkbox"] {
+  opacity: 0.00001;
+  position: absolute;
+  transition: transform 1s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+  
+label:hover {
+  transform: scale(1.05);
+}
+
+label{
+  cursor: pointer;
+  position: absolute;
+  background: var(--text);
+  color: var(--bg);
+  padding: 1%;
+  top: 1%;
+  left: 1%;
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
+  box-shadow: 0 2px var(--bg), 0 4px var(--text);
+  user-select: none;
+  transition: background 0.3s cubic-bezier(0.25, 0.1, 0.25, 1), color 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  margin-top: 5%;
+  margin-left: 7%;
+}
+
+label:after {
+  content: "✔\FE0E";
+  height: 1.2rem;
+  width: 1.2rem;
+  margin-left: 1rem;
+  border: solid 2px var(--bg);
+  text-align: center;
+  border-radius: 4px;
+  color: transparent;
+}
+  
+#color-mode:checked + label:after {
+  color: var(--bg);
+}
+
+
+
+
+
+
+
+
+
+
+/* Partie sur le menu de gauche de la première page HTML*/
+
+  
+#wrap-HTML1{
+  font-family: sans-serif;
+  font-size: 21px;
+  line-height: 1.6;
+  margin: 0;
+  display: flex;
+  transition: transform .9s cubic-bezier(.25, .1, .25, 1);
+}
+  
+#wrap-HTML1:not(:target) {
+  transform: translate3d(-335px, 0, 0);
+}
+  
+
+#open-HTML1,
+#close-HTML1{
+  height: 44px;
+  text-align: right;
+  display: block;
+  margin-right: -30px;
+}
+
+
+
+#wrap-HTML1:target #open-HTML1,
+#wrap-HTML1:not(:target) #close-HTML1{
+  display: none;
+}
+  
+#wrap-HTML1:target #open-HTML1{
+display: none;
+}
+  
+.nav-HTML1 a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+.Lien3-HTML1{
+  border-bottom-style: solid;
+  padding-right: 1%;
+  border-bottom-width: 3px;
+  border-bottom-color: var(--border);
+}
+
+.Lien1-HTML1:hover{
+  background-color: var(--liens1);
+  border-radius: 25px;
+  padding-left: 15px;
+}
+
+#close-HTML1:hover{
+  font-weight: 700;
+  font-size: 25px;
+}
+
+.header2-HTML1{
+  background: var(--navbar);
+  width: 360px;
+  padding: 0 20px;
+  display:inline-block;
+  vertical-align:top;
+  border-bottom-left-radius: 50px;
+}
+  
+.nav-HTML1{
+  padding: 25px;
+}
+  
+.main-HTML1{
+  padding: 25px;
+  flex: 1;
+  flex-wrap: wrap;
+  display:inline-block;
+}
+
+
+
+
+
+
+
+
+
+
+/* Adaptation du site web pour le format téléphone*/
+
+@media screen and (max-width: 823px) and (min-width: 100px) {
+
+  /* Format téléphone de la page de présentation personel*/
+
+  #label-HTML1{
+    margin-left: 30%;
+    margin-top: 60%;
+  }
+
+  #wrap-HTML1:not(:target) {
+    transform: translate3d(0, 0,0);
+  }
+
+  body{
+    margin: 0%;
+  }
+
+  #acceuil-HTML1{
+    display: none;
+  }
+
+  #wrap-HTML1{
+    margin-top: 25%;
+    align-items: center;
+    flex-direction: column;
+    transform: translate3d(0, 0, 0);
+  }
+
+  #header-HTML1{
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+
+  .header2-HTML1{
+    width: 100%;
+    border-bottom-left-radius: 0px;
+  }
+
+  .nav-HTML1{
+    padding: 15px;
+    display: block;
+  }
+
+  .main-HTML1{
+    padding: 15px;
+    margin: -7%;
+  }
+
+  #close-HTML1{
+    margin-right: 0;
+  }
+
+  .Lien3-HTML1{
+    padding-right: 0; 
+  }
+
+  .bloc-HTML1{
+    margin: 5%;
+  }
+
+  #open-HTML1,
+  #close-HTML1{
+    display: none;
+  }
+
+  .nav-HTML1 a {
+    pointer-events: none; 
+  }
+  #ProjetPerso-HTML1{
+    pointer-events: auto;
+  }
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /* Format téléphone de la page du projet personel*/
+
+
+  .boutton_cyclisme-HTML2 .agrandir {
+    transform: scale(1.2);
+    animation: pulse 3s infinite;
+  }
+
+  .info-HTML2{
+    font-size: 1px;
+  }
+
+  #label-HTML2{
+    margin-left: 33%;
+  }
+
+  .ENGLISH-HTML2{
+    margin-left: 0%;
+  }
+
+  .anglais-theme-wrapper{
+    margin-top: 22%;
+  }
+
+  .images{
+    display: none;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* Partie sur le style général de la page du projet personel*/
+
+.header-HTML2{
+  padding: 1%;
+  border-style: solid;
+  border-radius: 10px;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  border-color: var(--border);
+  border-width: 5px;
+  text-align: center;
+  color: var(--title);
+  font-size: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer-HTML2{
+  text-align: center;
+  padding-bottom: 1%;
+  color: var(--title);
+}
+
+.redirection-HTML2{
+  color: var(--liens2);
+}
+
+.lignes{
+  display: flex;
+  justify-content: space-around;
+}
+
+.boutton_cyclisme-HTML2{
+  margin: 5%;
+  border-radius: 20px;
+  background-color: var(--bg);
+  border-style: solid;
+  border-color: var(--border);
+  transition-duration: 1s;
+  padding-left: 8%;
+  padding-right: 8%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  border-width: 5px;
+}
+
+.info-HTML2{
+  display: none;
+  color: var(--text);
+  font-size: 25px;
+  padding: 2%;
+}
+
+.h2-HTML2{
+  color: var(--title);
+  font-size: 30px;
+  border-bottom-style: solid;
+  border-bottom-color: var(--border);
+}
+
+.images{
+  width: 25%;
+  float: left;
+  border-radius: 15%;
+  padding: 2%;
+}
+
+.boutton_cyclisme-HTML2:focus{
+  padding: 3%;
+  margin: 1%;
+}
+
+.boutton_cyclisme-HTML2:focus p{
+  font-size: 23px;
+  padding: 1%;
+  text-align: initial;
+}
+
+.boutton_cyclisme-HTML2:focus .info-HTML2{
+  display: block;
+  transition: 4s;
+}
+
+.boutton_cyclisme-HTML2:focus .agrandir{
+  display: none;
+}
+
+.boutton_cyclisme-HTML2:hover .agrandir {
+  transform: scale(1.2);
+  animation: pulse 0.5s infinite;
+}
+
+.boutton_cyclisme-HTML2:hover{
+  transform: scale(120%);
+}
+
+.boutton_cyclisme-HTML2:focus:hover{
+  transform: scale(100%);
+}
+
+.redirection-HTML2:hover{
+  color: var(--liens2hover);
+}
+
+@keyframes pulse{
+  0%, 100% {
+    transform: scale(1.5);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+
+
+
+
+
+
+
+
+/* Partie sur le bouton anglais (ce bouton reprend le meme concept que celui du darkmode) */
+
+.anglais-scheme-wrapper{
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  border-radius: 100%;
+  transition: 0.5s;
+}
+
+input[type="checkbox"]{
+  opacity: 0.00001;
+  position: absolute;
+}
+
+.ENGLISH-HTML2{
+  cursor: pointer;
+  position: absolute;
+  background: var(--text);
+  color: var(--bg);
+  padding: 1%;
+  top: 1%;
+  left: 1%;
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
+  box-shadow: 0 2px var(--bg), 0 4px var(--text);
+  user-select: none;
+  margin-top: 5%;
+  margin-left: 80%;
+}
+
+.ENGLISH-HTML2:after {
+  content: "✔\FE0E";
+  height: 1.2rem;
+  width: 1.2rem;
+  margin-left: 1rem;
+  border: solid 2px var(--bg);
+  text-align: center;
+  border-radius: 4px;
+  color: transparent;
+}
+
+#anglais-mode-HTML2:checked ~ .anglais-scheme-wrapper #français-HTML2{
+  display: none;
+}
+
+#anglais-mode-HTML2:not(:checked) ~ .anglais-scheme-wrapper #Anglais-HTML2{
+  display: none;
+}
+
+#anglais-mode-HTML2:checked + .ENGLISH-HTML2:after {
+  color: var(--bg);
+}
+
+
+@media screen and (max-width: 900px) {
+  nav{
+    flex-wrap: wrap;
+  }
+}
